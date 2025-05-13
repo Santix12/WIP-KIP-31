@@ -1,0 +1,13 @@
+{
+  "name": "kip-31-testing",
+  "version": "1.0.0",
+  "description": "Jest Testing Framework for KIP-31 Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["testing", "jest", "kip-31"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
