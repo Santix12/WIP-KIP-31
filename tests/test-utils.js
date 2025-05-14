@@ -8,7 +8,7 @@
  * @param {Function} [mockImplementation] - Optional mock implementation
  * @returns {jest.Mock} Mocked function
  */
-function createMockFunction(mockImplementation) {
+export function createMockFunction(mockImplementation) {
   return jest.fn(mockImplementation);
 }
 
@@ -17,7 +17,7 @@ function createMockFunction(mockImplementation) {
  * @param {string} type - Type of test data to generate
  * @returns {*} Randomly generated test data
  */
-function generateTestData(type) {
+export function generateTestData(type) {
   switch (type) {
     case 'string':
       return `test_${Math.random().toString(36).substring(7)}`;
@@ -43,12 +43,6 @@ function generateTestData(type) {
  * @param {number} [delay=100] - Delay in milliseconds
  * @returns {Promise<*>} Promise resolving to the value
  */
-function asyncSimulator(value, delay = 100) {
+export function asyncSimulator(value, delay = 100) {
   return new Promise(resolve => setTimeout(() => resolve(value), delay));
 }
-
-module.exports = {
-  createMockFunction,
-  generateTestData,
-  asyncSimulator
-};

@@ -1,4 +1,4 @@
-const { createMockFunction, generateTestData, asyncSimulator } = require('../test-utils');
+import { createMockFunction, generateTestData, asyncSimulator } from '../test-utils.js';
 
 // Sample core module to demonstrate testing capabilities
 class SampleCoreModule {
