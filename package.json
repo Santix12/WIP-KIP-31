@@ -1,0 +1,9 @@
+{
+  "name": "kip-31-testing",
+  "version": "1.0.0",
+  "description": "Jest Testing Framework for Core Modules",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {}
+}
