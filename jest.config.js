@@ -1,24 +1,14 @@
 /** @type {import('jest').Config} */
-module.exports = {
-  // Automatically clear mock calls, instances, and results before every test
-  clearMocks: true,
-
-  // Collect code coverage
+export default {
+  verbose: true,
+  testEnvironment: 'node',
+  transform: {},
+  extensionsToTreatAsEsm: ['.js'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1'
+  },
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  coverageProvider: 'v8',
-
-  // Test environment
-  testEnvironment: 'node',
-
-  // File matching and transformation
-  roots: ['<rootDir>/tests', '<rootDir>/src'],
-  testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[tj]s?(x)'
-  ],
-
-  // Coverage thresholds
   coverageThreshold: {
     global: {
       branches: 100,
@@ -26,8 +16,5 @@ module.exports = {
       lines: 100,
       statements: 100
     }
-  },
-
-  // Verbose reporting
-  verbose: true
+  }
 };
