@@ -1,4 +1,4 @@
-const CoreUtilities = require('../../src/core-utilities');
+import { CoreUtilities } from '../../src/core-utilities.js';
 
 describe('CoreUtilities', () => {
   describe('validateInput', () => {
