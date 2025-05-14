@@ -1,7 +1,7 @@
 /**
  * Core utility functions for comprehensive testing
  */
-class CoreUtilities {
+export class CoreUtilities {
   /**
    * Validate and sanitize input string
    * @param {string} input - Input string to validate
@@ -48,5 +48,3 @@ class CoreUtilities {
     return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 }
-
-module.exports = CoreUtilities;
