@@ -1,38 +1,33 @@
+/** @type {import('jest').Config} */
 module.exports = {
   // Automatically clear mock calls, instances, and results before every test
   clearMocks: true,
 
-  // Indicates whether the coverage information should be collected while executing the test
+  // Collect code coverage
   collectCoverage: true,
-
-  // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
-
-  // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
 
-  // A list of paths to directories that Jest should use to search for files in
-  roots: [
-    '<rootDir>/tests',
-    '<rootDir>/src'
-  ],
-
-  // The test environment that will be used for testing
+  // Test environment
   testEnvironment: 'node',
 
-  // A map from regular expressions to paths to transformers
-  transform: {},
+  // File matching and transformation
+  roots: ['<rootDir>/tests', '<rootDir>/src'],
+  testMatch: [
+    '**/__tests__/**/*.[jt]s?(x)',
+    '**/?(*.)+(spec|test).[tj]s?(x)'
+  ],
 
-  // Indicates whether each individual test should be reported during the run
-  verbose: true,
-
-  // Minimum threshold enforcement for coverage results
+  // Coverage thresholds
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
     }
-  }
+  },
+
+  // Verbose reporting
+  verbose: true
 };
